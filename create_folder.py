@@ -14,7 +14,7 @@ os.system('mkdir ' + next_folder_name)
 
 # Set the name of the starter file and its contents.
 starter_file_name = next_folder_name + '/soln.py'
-starter_file_contents = '# Read the contents of the input into a list\ninput = []\nwith open(\'./input.txt\', \'r\') as f:\n\tinput = f.readlines()'
+starter_file_contents = '# Read the contents of the input into a list\ninput = []\nwith open(\'./input.txt\', \'r\') as f:\n\tinput = [line.strip() for line in f.readlines()]'
 
 # Create the starter file and write the given contents.
 with open(starter_file_name, 'w') as fd:
